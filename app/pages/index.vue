@@ -192,7 +192,7 @@ function formatBytes(bytes: number) {
 
         <!-- Grid (Clean Image Grid) -->
         <div v-else class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          <BlobImage
+          <QBlobImage
             v-for="img in images"
             :key="img.key"
             :src="`/${img.key}`"
@@ -220,7 +220,7 @@ function formatBytes(bytes: number) {
             <div
               class="bg-muted relative flex aspect-video max-h-72 w-full items-center justify-center overflow-hidden"
             >
-              <BlobImage
+              <QBlobImage
                 :src="`/${selectedImage.key}`"
                 :alt="filename(selectedImage.key)"
                 format="webp"
